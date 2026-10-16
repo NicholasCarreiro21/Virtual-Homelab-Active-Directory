@@ -32,6 +32,7 @@ Hiring managers evaluating entry-level support candidates need evidence that I c
 | Host Machine | Windows PC |
 | Virtualization | Oracle VirtualBox |
 | Server OS | Windows Server 2022 Evaluation |
+| Server VM | NICKLAB-WIN11-01 |
 | Domain | `nicklab.local` |
 | Client OS | Windows 11 Pro |
 | Client VM | NICKLAB-WIN11-01 |
