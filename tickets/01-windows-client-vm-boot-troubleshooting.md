@@ -36,11 +36,11 @@ The Windows 11 client VM successfully reached Windows Setup after the ISO was mo
 
 - Virtual machine troubleshooting
 - Boot media troubleshooting
-- ISO and virtual DVD verification
-- Boot order configuration
-- Basic VirtualBox settings
-- Systematic troubleshooting
-- Documenting a technical issue and its resolution
+- ISO/DVD attachment verification
+- Boot order validation
+- Basic VirtualBox configuration
+- Calm problem solving under a setup failure
+- Documenting a real troubleshooting path instead of hiding the mistake
 
 ## Help Desk Takeaway
 
