@@ -1,9 +1,8 @@
 # Virtual-Homelab-Active-Directory
-# Help Desk Homelab
 
 ## Recruiter TL;DR
 
-Practical Windows help desk portfolio lab built with VirtualBox, Windows Server 2022, and Windows 11 Pro. Covers Active Directory setup, domain join, password resets, account enable/disable, group membership changes, shared-folder access, mapped drives, and Group Policy restrictions — documented with screenshots and help desk ticket write-ups.
+Practical Windows help desk portfolio lab built with VirtualBox, Windows Server 2022, and Windows 11 Pro. Covers Active Directory setup, domain join, password resets, account enable/disable, group membership changes, shared-folder access, mapped drives, and Group Policy restrictions - documented with screenshots and help desk ticket write-ups.
 
 This project is designed to demonstrate entry-level Windows support skills through hands-on lab work, troubleshooting, and technical documentation.
 
@@ -11,11 +10,11 @@ This project is designed to demonstrate entry-level Windows support skills throu
 
 A practical Windows help desk portfolio project documenting virtual machine setup, Windows Server preparation, Active Directory Domain Services configuration, and ticket-style troubleshooting workflows.
 
-This project is designed for help desk, IT support, and technical support roles. It demonstrates the ability to follow a structured lab process, document work clearly, organize screenshots, troubleshoot setup issues, and explain Windows support tasks in a professional way.
+This project demonstrates the ability to follow a structured lab process, document work clearly, organize screenshots, troubleshoot setup issues, and explain Windows support tasks in a professional way.
 
 ## Why This Project Matters
 
-Hiring managers evaluating entry-level support candidates need evidence that they can:
+Hiring managers evaluating entry-level support candidates need evidence that I can:
 
 - Follow instructions and document their process.
 - Set up a basic technical lab.
@@ -35,11 +34,9 @@ Hiring managers evaluating entry-level support candidates need evidence that the
 | Server OS | Windows Server 2022 Evaluation |
 | Domain | `nicklab.local` |
 | Client OS | Windows 11 Pro |
-| Directory Services | Active Directory Domain Services |
-| Name Resolution | DNS |
+| Client VM | NICKLAB-WIN11-01 |
 | Network | VirtualBox Internal Network |
 
-Update the server and client names below if you want to document their exact hostnames.
 
 ## Tools Used
 
@@ -52,7 +49,8 @@ Update the server and client names below if you want to document their exact hos
 - Group Policy Management
 - Windows networking tools
 - PowerShell
-- Git and GitHub
+- Git
+- GitHub
 - Markdown
 
 ## Current Status
@@ -84,272 +82,138 @@ Completed work includes:
 
 ## Screenshots
 
-The screenshots below document the lab setup and the support tasks performed. Each description explains what the step demonstrates and how it relates to a practical Windows administration or help desk workflow.
-
 ### 1. Project Folder Structure
-
-**Screenshot label:** Project folder structure
-
-Created a clean local project structure for screenshots, tickets, notes, diagrams, and portfolio documentation. Keeping project files organized makes technical work easier to review, maintain, and share with recruiters or other IT professionals.
+Organized the project files into separate folders for screenshots, help desk tickets, notes, diagrams, and documentation to keep the lab evidence easy to navigate and maintain.
 
 ### 2. VirtualBox Installed
-
-**Screenshot label:** VirtualBox installed
-
-Installed and verified Oracle VirtualBox, the virtualization platform used to run the Windows Server and Windows 11 virtual machines. Virtualization allows the lab to simulate a small business environment without requiring separate physical computers.
+Installed and verified Oracle VirtualBox using PowerShell and winget. VirtualBox provides the virtualization environment for running the Windows Server and Windows client machines on one computer.
 
 ### 3. Windows Server ISO Downloaded
-
-**Screenshot label:** Windows Server ISO downloaded
-
-Downloaded and verified the Windows Server 2022 Evaluation installation media. This ISO provides the operating system needed to build the server that will host Active Directory Domain Services and DNS for the lab.
+Downloaded the Windows Server 2022 Evaluation ISO to use as the installation media for the server virtual machine.
 
 ### 4. Windows 11 ISO Download Started
-
-**Screenshot label:** Windows 11 ISO download started
-
-Started downloading the Windows 11 installation media for the client workstation. The client represents an employee computer that can later be configured, joined to the domain, and used to test user sign-in, permissions, and support scenarios.
+Started downloading the Windows 11 ISO using the PowerShell/Fido method to prepare the installation media for the client workstation.
 
 ### 5. Windows 11 ISO Downloaded
-
-**Screenshot label:** Windows 11 ISO downloaded
-
-Verified that the Windows 11 installation media had downloaded successfully and was ready to use. Having the installation media prepared makes it possible to build the client virtual machine and continue with the endpoint support portion of the lab.
+Verified that the Windows 11 ISO downloaded successfully and was ready to be attached to the client virtual machine.
 
 ### 6. Windows Server VM ISO Setup
-
-**Screenshot label:** Server VM ISO setup
-
-Created the Windows Server virtual machine profile in VirtualBox and attached the Windows Server 2022 ISO. This prepares the virtual machine to boot from the installation media and begin the server operating system installation.
+Created the Windows Server virtual machine in VirtualBox and attached the installation ISO so the VM could boot into Windows Setup.
 
 ### 7. Windows Server VM Hardware Setup
-
-**Screenshot label:** Server VM hardware setup
-
-Assigned memory, CPU resources, and virtual disk capacity to the Windows Server virtual machine. Choosing suitable virtual hardware is an important preparation step because the server needs enough resources to run Windows Server and the directory services required for the lab.
+Configured the virtual machine's memory, CPU, and virtual disk allocation to provide the resources required to run Windows Server.
 
 ### 8. Windows Server VM Created
-
-**Screenshot label:** Server VM created
-
-Confirmed that the Windows Server virtual machine was created in VirtualBox with the intended hardware and installation media settings. This established the virtual server that would later become the domain controller for `nicklab.local`.
+Verified that the server VM was created with the expected hardware allocation and installation media before beginning the operating system installation.
 
 ### 9. Windows Server Setup Start
-
-**Screenshot label:** Windows Server setup start
-
-Started the Windows Server installation inside the VirtualBox virtual machine. This begins the process of building the server environment that will provide centralized user and computer management for the lab.
+Booted the server VM from the attached ISO and started the Windows Server installation process.
 
 ### 10. Windows Server Edition Selection
-
-**Screenshot label:** Windows Server edition selection
-
-Selected the Windows Server 2022 Standard Evaluation edition with Desktop Experience. The graphical interface makes it easier to practise Windows administration tasks using Server Manager, Active Directory Users and Computers, and other management consoles.
+Selected Windows Server 2022 Standard Evaluation with Desktop Experience to provide a graphical interface for server configuration and administration.
 
 ### 11. Windows Server Custom Install Type
-
-**Screenshot label:** Windows Server custom install type
-
-Selected a custom Windows Server installation to perform a clean installation on the virtual machine. This provides a fresh operating system environment for configuring the server roles and domain services required by the lab.
+Selected the custom installation option to perform a clean Windows Server installation on the VM's virtual disk.
 
 ### 12. Windows Server Drive Selection
-
-**Screenshot label:** Windows Server drive selection
-
-Selected the virtual disk as the Windows Server installation target. This step establishes where the operating system will be installed inside the VM and completes an important part of the server build process.
+Selected the 60 GB unallocated virtual disk as the installation destination for Windows Server.
 
 ### 13. Windows Server Login Screen
-
-**Screenshot label:** Windows Server login screen
-
-Confirmed that Windows Server installed successfully and reached the login screen. This shows that the initial operating system installation completed and the server was ready for its initial configuration.
+Confirmed that Windows Server completed installation and reached the login screen, indicating that the VM was ready for initial configuration.
 
 ### 14. Windows Server Manager Dashboard
-
-**Screenshot label:** Windows Server Manager dashboard
-
-Opened Server Manager after logging into Windows Server. Server Manager is a central administrative console used to review server status, manage roles and features, and begin configuring services such as Active Directory Domain Services.
+Verified that Server Manager launched successfully after installation. Server Manager provides access to server configuration and role management, including the setup of Active Directory Domain Services.
 
 ### 15. Server Renamed
-
-**Screenshot label:** Server renamed confirmed
-
-Renamed the Windows Server virtual machine to give it a consistent identity within the lab. A clear computer name makes it easier to identify the server when managing domain services, configuring network settings, and troubleshooting connections from the Windows client.
+Renamed the server to establish a consistent hostname for the lab. A clearly identified server is easier to recognize when configuring services and troubleshooting connectivity.
 
 ### 16. Add Roles and Features Wizard
-
-**Screenshot label:** Add Roles and Features Wizard
-
-Opened the Add Roles and Features Wizard to begin installing the server roles needed for the domain environment. This wizard provides a guided way to add Windows Server functionality without installing a separate operating system.
+Opened the Add Roles and Features Wizard in Server Manager to begin installing the server role required for Active Directory administration.
 
 ### 17. Active Directory Domain Services Selected
-
-**Screenshot label:** Active Directory Domain Services selected
-
-Selected Active Directory Domain Services as the server role for the lab. AD DS provides centralized management of domain user accounts, computers, security groups, and authentication, which are foundational concepts in many Windows business environments.
+Selected Active Directory Domain Services (AD DS), which provides centralized management of domain accounts, computers, and authentication.
 
 ### 18. Confirm AD DS Installation
-
-**Screenshot label:** Confirm AD DS installation
-
-Reviewed and confirmed the Active Directory Domain Services installation selections. Reviewing the selected roles and features before proceeding helps ensure the correct server functionality is installed for the planned domain controller configuration.
+Reviewed the selected AD DS role and installation options before confirming the installation.
 
 ### 19. AD DS Installed — Promotion Required
-
-**Screenshot label:** AD DS installation complete
-
-Completed the AD DS role installation and confirmed that the server still needed to be promoted to a domain controller. Installing the role makes the functionality available, while promotion configures the server to host the Active Directory domain.
+Completed the AD DS role installation. The server still required promotion to a domain controller before it could host the Active Directory domain.
 
 ### 20. Domain Controller Deployment Configuration
-
-**Screenshot label:** Domain controller deployment configuration
-
-Started the domain controller promotion process and configured a new forest for the lab. Creating a new forest establishes the foundation for the `nicklab.local` domain and provides the directory environment used to manage lab users and computers.
+Started the domain controller promotion process and configured a new forest for the `nicklab.local` lab domain.
 
 ### 21. DNS Options Warning
-
-**Screenshot label:** DNS options warning
-
-Reviewed the DNS delegation warning shown during domain controller configuration. In a small standalone lab, this warning can appear when there is no existing parent DNS zone to delegate to. Understanding the message helps distinguish an expected lab warning from a genuine configuration failure.
+Reviewed the DNS delegation warning displayed during setup. This warning is expected in a standalone lab without an existing parent DNS zone configured for delegation.
 
 ### 22. Review Domain Controller Options
-
-**Screenshot label:** Review domain controller options
-
-Reviewed the domain controller configuration options before proceeding with promotion. This step confirms the settings for the new domain environment and helps ensure the server is being configured for the intended Active Directory deployment.
+Reviewed the domain controller deployment settings and confirmed the intended forest and domain configuration before proceeding.
 
 ### 23. Prerequisites Check Passed
-
-**Screenshot label:** Prerequisites check passed
-
-Confirmed that the domain controller prerequisite checks passed before continuing. These checks help identify configuration problems that could prevent the server from being promoted successfully.
+Confirmed that the prerequisite checks passed, allowing the domain controller promotion process to continue.
 
 ### 24. Server Manager After Domain Reboot
-
-**Screenshot label:** Server Manager after domain reboot
-
-Confirmed that the server restarted successfully after domain controller promotion. A successful restart is an important checkpoint because the server must complete the promotion process before the new domain can be used for administration and client authentication.
+Verified that the server restarted after promotion and returned to the desktop, allowing the new domain controller configuration to take effect.
 
 ### 25. Domain Confirmed on Local Server
-
-**Screenshot label:** Domain confirmed on local server
-
-Confirmed that the server was configured for the `nicklab.local` domain. This demonstrates that the Active Directory domain was created and provides the basis for centralized user, group, and workstation administration.
+Verified the server's domain configuration after promotion, confirming that the Active Directory environment was established for the lab.
 
 ### 26. Active Directory Users and Computers Open
-
-**Screenshot label:** Active Directory Users and Computers open
-
-Opened Active Directory Users and Computers on the domain controller and confirmed that the `nicklab.local` domain was available for administration. This management console is used to create and manage user accounts, security groups, organizational units, and other directory objects.
+Opened Active Directory Users and Computers (ADUC) to manage domain user accounts, security groups, and organizational units.
 
 ### 27. Active Directory OU Structure Created
-
-**Screenshot label:** Active Directory OU structure created
-
-Created an organizational unit structure to keep directory objects organized. Separating users, groups, disabled accounts, and workstations into appropriate containers makes administration easier and can help apply policies to the correct users or computers in a business environment.
+Created an organizational unit (OU) structure to separate users, groups, disabled accounts, and workstations. This organization makes directory objects easier to manage and supports more targeted administration.
 
 ### 28. Active Directory Security Groups Created
-
-**Screenshot label:** Active Directory security groups created
-
-Created security groups for the lab's access-management scenarios, including the groups used for department or shared-resource access. Security groups help administrators manage permissions through group membership rather than assigning every permission to each user individually.
+Created security groups for the lab's access-control scenarios. Group-based permissions make it easier to manage access to shared resources according to users' roles or departments.
 
 ### 29. Active Directory Test Users Created
-
-**Screenshot label:** Active Directory test users created
-
-Created test domain user accounts to represent users who would need access to the lab environment. These accounts provide a way to practise common help desk tasks such as password resets, account status changes, access changes, and domain sign-in testing without using real employee accounts.
+Created test user accounts representing different departments and support roles. These accounts provide a controlled way to practise account administration, authentication checks, and access troubleshooting.
 
 ### 30. Active Directory Group Membership Assigned
-
-**Screenshot label:** Active Directory group membership assigned
-
-Assigned users to the appropriate security groups for the lab's role-based access examples. This demonstrates basic identity and access management: users can be placed into groups that represent their department or support role, and group membership can be used to control access to shared resources.
+Assigned test users to the appropriate security groups to demonstrate role-based access management and prepare for shared-resource permission testing.
 
 ### 31. Windows 11 Client VM Created
-
-**Screenshot label:** Windows 11 client VM created
-
-Created the Windows 11 Pro client virtual machine. This client represents a normal employee workstation that can be configured and joined to `nicklab.local` to demonstrate domain sign-in, shared-resource access, policy application, and endpoint troubleshooting.
+Created a Windows 11 client VM to represent an employee workstation. The client is used to test domain connectivity, user authentication, and access to network resources.
 
 ### 32. Windows 11 Client VM Network Settings
-
-**Screenshot label:** Windows 11 client VM network settings
-
-Reviewed and configured the Windows 11 virtual machine's network settings before completing the client setup. Correct network configuration is essential for domain join and Active Directory authentication, especially because the client must be able to locate the domain controller through DNS.
+Reviewed the client's network adapter configuration. Correct network connectivity and DNS settings are essential for locating the domain controller and successfully joining an Active Directory domain.
 
 ### 33. Windows 11 Client Installation Started
-
-**Screenshot label:** Windows 11 client installation started
-
-Started the Windows 11 installation process for the client workstation. This is the foundation of the endpoint support portion of the lab, where the workstation can later be configured for network access, joined to the domain, and used to test standard user workflows.
+Started installing Windows 11 on the client VM to prepare the workstation for domain configuration and endpoint support testing.
 
 ### 34. Windows 11 Client Desktop Ready
-
-**Screenshot label:** Windows 11 client desktop ready
-
-Confirmed that the Windows 11 client successfully reached the desktop after installation. This shows that the endpoint operating system is ready for the next steps, including network and DNS configuration, domain joining, domain user sign-in, and help desk task testing.
+Confirmed that Windows 11 completed installation and reached the desktop. The client was ready for network configuration, domain joining, and user authentication testing.
 
 ### 35. Domain Administrator Login Proof
-
-**Screenshot label:** Domain administrator login proof
-
-Confirmed that the Windows 11 client was joined to the `nicklab.local` domain and used a domain account to sign in. Where included, the `whoami` output helps distinguish a domain identity from a local Windows account. This demonstrates the domain authentication path used for administrative testing in the lab.
+Verified that the Windows client could authenticate using a domain administrator account after joining the lab domain. This helps confirm that domain authentication is functioning on the workstation.
 
 ### 36. Domain User Login Proof
+Tested sign-in with a standard domain user account to verify that the client could authenticate regular users, not only an administrator.
 
-**Screenshot label:** Domain user login proof
+### 37. Password Reset Success — Jane Smith
+Reset Jane Smith's domain account password through Active Directory Users and Computers. This demonstrates a common help desk task for resolving account sign-in issues.
 
-Confirmed that the Windows 11 client could sign in with a standard domain test account. This demonstrates that the environment supports normal Active Directory user authentication, not only administrative access, and provides a basis for testing permissions and policies under a standard user's context.
+### 38. Account Disabled — Alex Turner
+Disabled Alex Turner's domain account in Active Directory to demonstrate how user access can be suspended while the account record remains available for administration.
 
-### 37. Password Reset Success — Jane
+### 39. Account Enabled — Alex Turner
+Re-enabled Alex Turner's account to demonstrate restoring account access after a previous disablement.
 
-**Screenshot label:** Password reset success for Jane
+### 40. Group Membership Added — Alex Turner
+Updated Alex Turner's security group membership in Active Directory to demonstrate how group assignments can be used to manage access to department resources.
 
-Reset the password for the standard domain user account Jane using Active Directory Users and Computers. This demonstrates a common help desk workflow: assisting a user who cannot sign in by resetting an Active Directory password and confirming that the administrative action was completed.
+### 41. Sales Shared Folder Access — Jane Smith
+Verified Jane Smith's access to the Sales shared folder after configuring the required group membership and permissions. This demonstrates how to test whether a user can access a network resource.
 
-### 38. Account Disabled — Alex
+### 42. Sales Mapped Drive Access — Jane Smith
+Mapped the Sales network share to drive `Z:` on the Windows client and verified access to the shared resource. A mapped drive provides users with a convenient way to access a network folder through File Explorer.
 
-**Screenshot label:** Account disabled for Alex
-
-Disabled the standard domain user account Alex in Active Directory Users and Computers. This demonstrates a common account lifecycle and access-control workflow, such as disabling an account when access should no longer be available while retaining the account record for administrative purposes.
-
-### 39. Account Enabled — Alex
-
-**Screenshot label:** Account enabled for Alex
-
-Re-enabled Alex's domain user account after the account-disable test. This demonstrates the account lifecycle workflow in reverse: restoring an account's enabled status when access should be reinstated and confirming the change in Active Directory.
-
-### 40. Group Membership Added — Alex
-
-**Screenshot label:** Group membership updated for Alex
-
-Updated Alex's security group membership in Active Directory Users and Computers. This demonstrates a common help desk access-management workflow: changing a user's group membership so the account can receive the appropriate department or shared-resource access through group-based permissions.
-
-### 41. Sales Shared Folder Access — Jane
-
-**Screenshot label:** Sales shared folder access
-
-Configured the Sales shared folder and tested Jane's access from the Windows 11 client. This demonstrates a common help desk permissions workflow: reviewing share and NTFS permissions, using group membership to manage access, and verifying that a standard domain user can reach a shared resource.
-
-### 42. Sales Mapped Drive Access — Jane
-
-**Screenshot label:** Sales mapped drive access
-
-Mapped the Sales shared folder as a network drive on the Windows 11 client while signed in as Jane. This demonstrates a common help desk task: connecting a user to a department network drive, checking the mapped path, and confirming that the user can access the shared content through the mapped drive.
-
-### 43. Group Policy Control Panel Restriction — Jane
-
-**Screenshot label:** Group Policy Control Panel restriction
-
-Created and applied a Group Policy Object that prevents standard domain users from opening Control Panel and PC Settings. This demonstrates a basic Windows administration workflow: creating a GPO, linking it to the appropriate user scope, refreshing Group Policy on the Windows 11 client, and verifying that the restriction applies to a standard domain user.
+### 43. Group Policy Control Panel Restriction — Jane Smith
+Configured a Group Policy Object (GPO) to restrict access to Control Panel and PC Settings for standard domain users. Updated policy on the client and tested the result to verify that the restriction was applied.
 
 ## Project Documents
 
-- **Case Study:** `case-study.md` — objectives, lab setup, configuration, challenges, and lessons learned.
-- **Help Desk Ticket Write-Ups:** `tickets/` — individual support scenarios documenting the issue, investigation, actions taken, and outcome.
-- **Lessons Learned:** `lessons-learned.md` — technical lessons and troubleshooting experience gained while building the lab.
-- **Security Notes:** `security-notes.md` — notes about account management, group membership, permissions, and access control.
+## Help Desk Ticket Writeups
 
 ## Completed Help Desk Scenarios
 
@@ -376,6 +240,4 @@ Possible future additions include:
 
 ## Portfolio Value
 
-This project is intentionally entry-level and focused on practical learning. It does not claim senior-level administration experience. Instead, it demonstrates foundational Windows support skills, structured lab setup, Active Directory basics, user and group management, shared-resource troubleshooting, mapped drive configuration, Group Policy testing, screenshot documentation, and ticket-style communication.
-
-The project provides evidence of hands-on practice relevant to entry-level help desk, IT support, and technical support roles.
+This project demonstrates practical Windows support skills, Active Directory administration, basic troubleshooting, and clear technical documentation for entry-level IT support roles.
