@@ -84,7 +84,7 @@ Completed work includes:
 ## Screenshots
 
 ### 1. Project Folder Structure
-!https://github.com/NicholasCarreiro21/Virtual-Homelab-Active-Directory/blob/main/screenshots/setup/Project%20Folder%20Structure.png
+![Project Folder Structure](screenshots/setup/Project%20Folder%20Structure.png)
 Organized the project files into separate folders for screenshots, help desk tickets, notes, diagrams, and documentation to keep the lab evidence easy to navigate and maintain.
 
 ### 2. VirtualBox Installed
