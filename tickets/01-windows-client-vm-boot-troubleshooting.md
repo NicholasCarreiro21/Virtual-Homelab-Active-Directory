@@ -8,8 +8,8 @@ During setup of the Windows 11 client virtual machine for the help desk lab, the
 
 - Host OS: Windows PC
 - Virtualization platform: Oracle VirtualBox
-- Server VM: NickLab domain controller
-- Client VM: Windows 11 Pro client
+- Server VM: `NICKLAB-DC01`
+- Client VM: `NICKLAB-WIN11-01`
 - Intended client OS: Windows 11
 - Installation media: Windows 11 ISO (`Windows.iso`)
 
