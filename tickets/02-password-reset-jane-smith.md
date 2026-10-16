@@ -30,7 +30,7 @@ Jane Smith's domain password was reset successfully. Screenshot 37 provides evid
 
 ## Screenshot Reference
 
-- `screenshots/active-directory/37-password-reset-success-jane-smith.png`
+- `screenshots/active-directory/Password%20Reset%20Success%20-%20Jane%20Smith.png`
 
 ## Skills Demonstrated
 
