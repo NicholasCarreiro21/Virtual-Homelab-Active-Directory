@@ -259,12 +259,12 @@ Configured a Group Policy Object (GPO) to restrict access to Control Panel and P
 - [Case Study](case-study.md)
   
 ## Help Desk Ticket Writeups
-- [Ticket 01 - Windows 11 Client VM Boot Troubleshooting](01-windows-client-vm-boot-troubleshooting.md)
-- [Ticket 02 - Password Reset - Jane Smith](02-password-reset-jane-smith.md)
-- [Ticket 03 - Account Disable / Re-enable - Alex Turner](03-account-disable-enable-alex-turner.md)
-- [Ticket 04 - Group Membership Access Change - Alex Turner](04-group-membership-access-change-alex-turner.mdd)
-- [Ticket 05 - Shared Folder Access Denied - Sales Share](05-shared-folder-access-denied-sales.md)
-- [Ticket 06 - Control Panel Restricted by Group Policy](06-group-policy-control-panel-restriction.md)
+- [Ticket 01 - Windows 11 Client VM Boot Troubleshooting](tickets/01-windows-client-vm-boot-troubleshooting.md)
+- [Ticket 02 - Password Reset - Jane Smith](tickets/02-password-reset-jane-smith.md)
+- [Ticket 03 - Account Disable / Re-enable - Alex Turner](tickets/03-account-disable-enable-alex-turner.md)
+- [Ticket 04 - Group Membership Access Change - Alex Turner](tickets/04-group-membership-access-change-alex-turner.md)
+- [Ticket 05 - Shared Folder Access Denied - Sales Share](tickets/05-shared-folder-access-denied-sales.md)
+- [Ticket 06 - Control Panel Restricted by Group Policy](tickets/06-group-policy-control-panel-restriction.md)
 
 ## Completed Help Desk Scenarios
 
