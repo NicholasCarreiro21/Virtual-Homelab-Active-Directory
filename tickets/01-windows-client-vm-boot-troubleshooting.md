@@ -44,4 +44,4 @@ The Windows 11 client VM successfully reached Windows Setup after the ISO was mo
 
 ## Help Desk Takeaway
 
-When a device fails to start as expected, a technician should isolate the affected system, confirm the symptoms, and check the most likely causes before making changes. Verifying the installation media and boot configuration provides a structured starting point for resolving virtual machine boot problems.
+When a device fails to start as expected, a technician should isolate the affected system, confirm the symptoms, and check the most likely causes before making changes. Verifying the installation media and boot configuration, testing your fixes and documenting the process and resolution clearly provides a structured starting point for resolving virtual machine boot problems.
