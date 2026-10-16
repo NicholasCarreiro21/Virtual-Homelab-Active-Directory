@@ -1,4 +1,4 @@
-# Ticket 02 — Password Reset — Jane Smith
+# Ticket 02 - Password Reset - Jane Smith
 
 ## Summary
 
