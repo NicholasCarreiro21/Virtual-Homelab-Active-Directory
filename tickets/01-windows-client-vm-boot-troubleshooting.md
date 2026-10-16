@@ -1,4 +1,4 @@
-# Ticket 01 — Windows 11 Client VM Boot Troubleshooting
+# Ticket 01 - Windows 11 Client VM Boot Troubleshooting
 
 ## Summary
 
