@@ -66,16 +66,22 @@ Each ticket records the reported issue, the troubleshooting or administrative st
 
 ## Skills Demonstrated
 
-- Windows Server and virtual machine setup
-- Active Directory users, groups, and organizational units
-- Domain joining and domain-user sign-in validation
-- Basic network and DNS configuration
-- Password reset and account lifecycle tasks
-- Security group membership management
-- Shared folder access and mapped network drives
-- Group Policy configuration and verification
-- Troubleshooting documentation and screenshot evidence
-- GitHub and Markdown documentation
+- Windows Server setup basics
+- Active Directory Users and Computers
+- OU, user, and group organization
+- Password reset workflow
+- Account disable and re-enable workflow
+- Security group membership changes
+- Shared folder permission troubleshooting
+- SMB share access testing
+- Mapped network drive setup
+- Group Policy Management
+- gpupdate testing
+- Windows 11 domain client validation
+- PowerShell-assisted workflow
+- Screenshot-based documentation
+- Help desk ticket writing
+- GitHub portfolio documentation
 
 ## What This Project Demonstrates
 
