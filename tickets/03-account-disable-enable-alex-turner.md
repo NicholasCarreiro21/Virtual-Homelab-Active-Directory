@@ -35,7 +35,11 @@ The account disable and re-enable process was completed successfully. Screenshot
 
 ## Skills Demonstrated
 
-Account lifecycle support, access control, offboarding-style account handling, restoring access, and audit-friendly documentation.
+- Account lifecycle support
+- Access control
+- Offboarding-style account handling
+- Restoring access
+- Audit-friendly documentation.
 
 ## Help Desk Takeaway
 
