@@ -30,8 +30,8 @@ The account disable and re-enable process was completed successfully. Screenshot
 
 ## Screenshot References
 
-- `screenshots/active-directory/38-account-disabled-alex-turner.png`
-- `screenshots/active-directory/39-account-enabled-alex-turner.png`
+- `screenshots/active-directory/Account%20Disabled%20-%20Alex%20Turner.png`
+- `screenshots/active-directory/Account%20Enabled%20-%20Alex%20Turner.png`
 
 ## Skills Demonstrated
 
