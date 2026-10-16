@@ -256,8 +256,15 @@ Mapped the Sales network share to drive `Z:` on the Windows client and verified 
 Configured a Group Policy Object (GPO) to restrict access to Control Panel and PC Settings for standard domain users. Updated policy on the client and tested the result to verify that the restriction was applied. This demonstrates Windows administration workflow: creating a GPO, linking it to the correct user OU, forcing a policy update on the Windows 11 client, and verifying the restriction applied successfully for the domain user Jane Smith.
 
 ## Project Documents
-
+- [Case Study](case-study.md)
+  
 ## Help Desk Ticket Writeups
+- [Ticket 01 - Windows 11 Client VM Boot Troubleshooting](01-windows-client-vm-boot-troubleshooting.md)
+- [Ticket 02 - Password Reset - Jane Smith](02-password-reset-jane-smith.md)
+- [Ticket 03 - Account Disable / Re-enable - Alex Turner](03-account-disable-enable-alex-turner.md)
+- [Ticket 04 - Group Membership Access Change - Alex Turner](04-group-membership-access-change-alex-turner.mdd)
+- [Ticket 05 - Shared Folder Access Denied - Sales Share](05-shared-folder-access-denied-sales.md)
+- [Ticket 06 - Control Panel Restricted by Group Policy](06-group-policy-control-panel-restriction.md)
 
 ## Completed Help Desk Scenarios
 
