@@ -155,7 +155,7 @@ Selected Active Directory Domain Services (AD DS), which provides centralized ma
 ![Confirm AD DS Installation](screenshots/active-directory/Confirm%20AD%20DS%20Installation.png)
 Reviewed the selected AD DS role and installation options before confirming the installation.
 
-### 19. AD DS Installed — Promotion Required
+### 19. AD DS Installed - Promotion Required
 ![AD DS Installed - Promotion required](screenshots/active-directory/AD%20DS%20Installed%20-%20Promotion%20required.png)
 Completed the AD DS role installation. The server still required promotion to a domain controller before it could host the Active Directory domain.
 
@@ -227,31 +227,31 @@ Verified that the Windows client could authenticate using a domain administrator
 ![Domain User Login Proof](screenshots/active-directory/Domain%20User%20Login%20Proof.png)
 Tested sign-in with a standard domain user account to verify that the client could authenticate regular users, not only an administrator.
 
-### 37. Password Reset Success — Jane Smith
+### 37. Password Reset Success - Jane Smith
 ![Password Reset Success - Jane Smith](screenshots/active-directory/Password%20Reset%20Success%20-%20Jane%20Smith.png)
 Reset Jane Smith's domain account password through Active Directory Users and Computers. This demonstrates a common help desk task for resolving account sign-in issues.
 
-### 38. Account Disabled — Alex Turner
+### 38. Account Disabled - Alex Turner
 ![Account Disabled - Alex Turner](screenshots/active-directory/Account%20Disabled%20-%20Alex%20Turner.png)
 Disabled Alex Turner's domain account in Active Directory to demonstrate how user access can be suspended while the account record remains available for administration.
 
-### 39. Account Enabled — Alex Turner
+### 39. Account Enabled - Alex Turner
 ![Account Enabled - Alex Turner](screenshots/active-directory/Account%20Enabled%20-%20Alex%20Turner.png)
 Re-enabled Alex Turner's account to demonstrate restoring account access after a previous disablement.
 
-### 40. Group Membership Added — Alex Turner
+### 40. Group Membership Added - Alex Turner
 ![Group Membership Added - Alex Turner](screenshots/active-directory/Group%20Membership%20Added%20-%20Alex%20Turner.png)
 Updated Alex Turner's security group membership in Active Directory to demonstrate how group assignments can be used to manage access to department resources.
 
-### 41. Sales Shared Folder Access — Jane Smith
+### 41. Sales Shared Folder Access - Jane Smith
 ![Sales Shared Folder Access - Jane Smith](screenshots/active-directory/Sales%20Shared%20Folder%20Access%20-%20Jane%20Smith.png)
 Verified Jane Smith's access to the Sales shared folder after configuring the required group membership and permissions. This demonstrates how to test whether a user can access a network resource.
 
-### 42. Sales Mapped Drive Access — Jane Smith
+### 42. Sales Mapped Drive Access - Jane Smith
 ![Sales Mapped Drive Access](screenshots/active-directory/Sales%20Mapped%20Drive%20Access.png)
 Mapped the Sales network share to drive `Z:` on the Windows client and verified access to the shared resource. A mapped drive provides users with a convenient way to access a network folder through File Explorer.
 
-### 43. Group Policy Control Panel Restriction — Jane Smith
+### 43. Group Policy Control Panel Restriction - Jane Smith
 ![Group Policy Control Panel Restriction - Jane Smith](screenshots/active-directory/Group%20Policy%20Control%20Panel%20Restriction%20-%20Jane%20Smith.png)
 Configured a Group Policy Object (GPO) to restrict access to Control Panel and PC Settings for standard domain users. Updated policy on the client and tested the result to verify that the restriction was applied.
 
