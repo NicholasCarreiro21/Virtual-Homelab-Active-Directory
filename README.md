@@ -253,7 +253,7 @@ Mapped the Sales network share to drive `Z:` on the Windows client and verified 
 
 ### 43. Group Policy Control Panel Restriction - Jane Smith
 ![Group Policy Control Panel Restriction - Jane Smith](screenshots/active-directory/Group%20Policy%20Control%20Panel%20Restriction%20-%20Jane%20Smith.png)
-Configured a Group Policy Object (GPO) to restrict access to Control Panel and PC Settings for standard domain users. Updated policy on the client and tested the result to verify that the restriction was applied.
+Configured a Group Policy Object (GPO) to restrict access to Control Panel and PC Settings for standard domain users. Updated policy on the client and tested the result to verify that the restriction was applied. This demonstrates a basic Windows administration workflow: creating a GPO, linking it to the correct user OU, forcing a policy update on the Windows 11 client, and verifying the restriction applied successfully for the domain user Jane Smith.
 
 ## Project Documents
 
