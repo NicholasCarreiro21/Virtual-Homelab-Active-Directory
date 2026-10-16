@@ -1,47 +1,52 @@
-# Ticket 01 — Windows 11 Client VM Boot Troubleshooting
+# Ticket 01 — Windows 11 Client VM Network Troubleshooting
 
 ## Summary
 
-While building the Windows 11 client virtual machine for the help desk lab, the VM initially failed to boot into Windows Setup and displayed a black screen / boot failure behavior. I treated the issue like a help desk troubleshooting ticket: verify the symptoms, check the obvious causes first, test one fix at a time, and document the final resolution.
+While configuring the Windows 11 client for the help desk lab, the workstation received an automatic private IP address (`169.254.126.117`) instead of the intended static address. This prevented the client from communicating with the domain controller as required for Active Directory and domain services. I reviewed the VirtualBox network configuration and configured static IP addressing and DNS settings for the lab network.
 
 ## Environment
 
 - Host OS: Windows PC
 - Virtualization platform: Oracle VirtualBox
-- Server VM: Windows Server 2022 domain controller
-- Client VM: Windows 11 Pro client
-- Intended client OS: Windows 11 Pro
-- Installation media: `Windows.iso`
+- Server VM: NickLab domain controller
+- Server OS: Windows Server 2022 Evaluation
+- Client VM: Windows 11 Pro
+- Domain: `nicklab.local`
+- VirtualBox network: Internal Network (`nicklab`)
+- Server IP address: `192.168.100.10`
+- Client IP address: `192.168.100.20`
+- Client DNS server: `192.168.100.10`
 
 ## Issue
 
-The Windows 11 client VM did not start the installer normally. The VM either displayed a black screen or failed to boot from the installation media.
+The Windows 11 client initially displayed an APIPA address in the `169.254.x.x` range rather than an address configured for the lab network. The client also needed to use the domain controller for DNS resolution to support communication with the `nicklab.local` domain.
 
 ## Troubleshooting Steps
 
-1. Confirmed the issue was isolated to the new Windows 11 client VM and did not affect the existing domain controller VM.
-2. Powered off only the affected client VM.
-3. Verified the Windows 11 ISO was downloaded and attached to the VM as virtual DVD installation media.
-4. Checked the VM boot order and set the DVD/optical drive before the virtual hard disk.
-5. Reviewed EFI/Secure Boot behavior in VirtualBox.
-6. Adjusted VM display settings so the boot screen would render properly.
-7. Mounted the Windows 11 ISO when VirtualBox prompted for installation media.
-8. Retried the boot process and pressed a key at the `Press any key to boot from CD or DVD` prompt.
+1. Reviewed the Windows 11 client's IP configuration and identified the APIPA address `169.254.126.117`.
+2. Checked the VirtualBox network adapter configuration for the client and server virtual machines.
+3. Configured both virtual machines to use the same VirtualBox Internal Network named `nicklab`.
+4. Assigned the domain controller the static IP address `192.168.100.10` with subnet mask `255.255.255.0`.
+5. Configured the domain controller's DNS setting to use `127.0.0.1`.
+6. Assigned the Windows 11 client the static IP address `192.168.100.20` with subnet mask `255.255.255.0`.
+7. Configured the client's preferred DNS server as `192.168.100.10`, directing domain-related DNS queries to the domain controller.
+8. Reviewed the client network configuration to confirm the intended IP address and DNS server were set.
+9. Tested connectivity and domain-related functionality after correcting the network settings.
 
 ## Resolution
 
-The VM successfully booted into Windows 11 Setup after the Windows ISO was mounted as the virtual DVD and the VM was configured to boot from DVD/optical media first.
+Configured the Windows Server 2022 domain controller and Windows 11 client with static IP addresses on the same VirtualBox Internal Network. The client was configured to use the domain controller at `192.168.100.10` for DNS, providing the network configuration required for the `nicklab.local` Active Directory environment.
 
 ## Skills Demonstrated
 
-- Virtual machine troubleshooting
-- Boot media troubleshooting
-- ISO/DVD attachment verification
-- Boot order validation
-- Basic VirtualBox configuration
-- Calm problem solving under a setup failure
-- Documenting a real troubleshooting path instead of hiding the mistake
+- Basic Windows IP configuration
+- APIPA address identification
+- Static IP addressing
+- DNS configuration for an Active Directory environment
+- VirtualBox network adapter configuration
+- Basic client-to-server connectivity troubleshooting
+- Documenting troubleshooting steps and configuration changes
 
 ## Help Desk Takeaway
 
-This issue is useful because it mirrors real IT support work: a device does not boot as expected, so the technician verifies the environment, isolates the affected system, checks boot media and configuration, tests a fix, and documents the resolution clearly.
+When a workstation cannot communicate with domain services, review its IP address, subnet, DNS settings, and virtual or physical network connection. An APIPA address can indicate that the system did not obtain a usable address automatically. In a small lab using an Internal Network without DHCP, static addressing provides a predictable configuration for the client and domain controller.
