@@ -35,7 +35,9 @@ Alex Turner was successfully added to the `Sales-Shared` security group. Screens
 
 ## Skills Demonstrated
 
-Group membership updates, access management, role-based access basics, and support-style documentation.
+- Group membership updates
+- access management
+- role-based access basics and support-style documentation
 
 ## Help Desk Takeaway
 
